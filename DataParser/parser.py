@@ -13,6 +13,7 @@ class Parser:
         str_response = response.read().decode('utf-8')
         obj = json.loads(str_response)
         #print(json.dumps(obj,sort_keys=True, indent=4, separators=(',', ': ')))
+        
         file = open('data_csv/data_time.csv','w',encoding='utf-8', newline='')
         csvW = csv.writer(file)
         if obj['query']['results'] is not None:
